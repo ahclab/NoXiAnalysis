@@ -1,0 +1,14 @@
+numpy
+matplotlib
+opencv-python
+scipy
+scikit-image
+tqdm
+pydub
+librosa
+soundfile
+pysndfx
+chardet
+ffmpeg-python
+pyannote.audio
+docker
