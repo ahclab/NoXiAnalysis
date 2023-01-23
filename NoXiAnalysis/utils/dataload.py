@@ -6,8 +6,8 @@ from NoXiAnalysis.utils.utils import repo_root, read_txt
 
 
 class DataLoad:
-    def __init__(self, repo = None):
-        self.folder_name_list = read_txt(join(repo_root(), "config/folder_name.txt"))
+    def __init__(self, repo = None, config = "config/folder_name.txt"):
+        self.folder_name_list = read_txt(join(repo_root(), config))
         self.path_dict = {}
         self.repo = repo
 

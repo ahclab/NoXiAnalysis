@@ -13,9 +13,9 @@ if __name__ == "__main__":
 
     data_load = DataLoad()
 
-    for key, input_path in data_load["video_expert.mp4"].items():
-        output_path = join(args.output_dir, key, "video_expert_openface.csv")
-        openfaceFeatureExtraction(input_path, output_path)
+    # for key, input_path in data_load["video_expert.mp4"].items():
+    #     output_path = join(args.output_dir, key, "video_expert_openface.csv")
+    #     openfaceFeatureExtraction(input_path, output_path)
     
     for key, input_path in data_load["video_novice.mp4"].items():
         output_path = join(args.output_dir, key, "video_novice_openface.csv")

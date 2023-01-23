@@ -11,7 +11,7 @@ import NoXiAnalysis.utils.utils as utils
 
 def process_gpu0(data_load, output_dir):
     for key, input_path in data_load["video_expert_low.mp4"].items():
-        output_path = join(output_dir, key, "video_expert_openface.csv")
+        output_path = join(output_dir, key, "video_expert_openpose.csv")
         thread = threading.Thread(target=openposeFeatureExtraction, args=(input_path, output_path, 0))
         thread.start()
         while True:
@@ -21,7 +21,7 @@ def process_gpu0(data_load, output_dir):
 
 def process_gpu1(data_load, output_dir):
     for key, input_path in data_load["video_novice_low.mp4"].items():
-        output_path = join(output_dir, key, "video_novice_openface.csv")
+        output_path = join(output_dir, key, "video_novice_openpose.csv")
         thread = threading.Thread(target=openposeFeatureExtraction, args=(input_path, output_path, 1))
         thread.start()
         while True:
