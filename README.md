@@ -24,28 +24,28 @@
 * Dependencies: 
   - Install requirements: `pip install -r requirements.txt`
   - Install repo: `pip install -e .`
-* Data Placement:
-  - NoXi Database:
-  NoXiAnalysis/data/
-    ├── Augsburg_01
-    │   ├── audio_expert.wav
-    │   ├── audio_novice.wav
-    │   ├── video_expert.mp4
-    │   └── video_novice.mp4
-    ├── Augsburg_02
-    │   ├── audio_expert.wav
-    │   ├── audio_novice.wav
-    │   ├── video_expert.mp4
-    │   └── video_novice.mp4
-    ├── Augsburg_03
-    │   ├── audio_expert.wav
-    │   ├── audio_novice.wav
-    │   ├── video_expert.mp4
-    │   └── video_novice.mp4
-    ...
-  
-  - OpenPose Model: (https://drive.google.com/drive/folders/1JsvI4M4ZTg98fmnCZLFM-3TeovnCRElG)
-  NoXiAnalysis/openpose/model/[PLACEMENT HERE]
+* Data Placement:  
+  - NoXi Database:  
+  NoXiAnalysis/data/  
+    ├── Augsburg_01  
+    │   ├── audio_expert.wav  
+    │   ├── audio_novice.wav  
+    │   ├── video_expert.mp4  
+    │   └── video_novice.mp4  
+    ├── Augsburg_02  
+    │   ├── audio_expert.wav  
+    │   ├── audio_novice.wav  
+    │   ├── video_expert.mp4  
+    │   └── video_novice.mp4  
+    ├── Augsburg_03  
+    │   ├── audio_expert.wav  
+    │   ├── audio_novice.wav  
+    │   ├── video_expert.mp4  
+    │   └── video_novice.mp4  
+    ...  
+    
+  - OpenPose Model: (https://drive.google.com/drive/folders/1JsvI4M4ZTg98fmnCZLFM-3TeovnCRElG)  
+  NoXiAnalysis/openpose/model/[PLACEMENT HERE]  
 
 
 
