@@ -18,11 +18,12 @@ def reduceVideoResolution(input_path, output_path, width = 320):
     subprocess.call(cmd, shell=True)
 
 def audioMixing(expert_path, novice_path, output_path):
+    print(output_path)
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     sound1 = AudioSegment.from_file(expert_path, "wav")
     sound2 = AudioSegment.from_file(novice_path, "wav")
 
-    sound = sound1 + sound2
+    sound = sound1.overlay(sound2, position=0)
 
     sound.export(output_path, format="wav")
 
