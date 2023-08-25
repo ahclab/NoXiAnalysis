@@ -1,9 +1,12 @@
-data/
+NoXiAnalysis/data/
 output/
 .DS_Store
 ._*
 body_pose*
 hand_pose*
+NoXiAnalysis/vad_using_opensmile/
+NoXiAnalysis/old.program/
+
 
 *.pth
 

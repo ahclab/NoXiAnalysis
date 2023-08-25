@@ -17,16 +17,28 @@ def reduceVideoResolution(input_path, output_path, width = 320):
     print(cmd)
     subprocess.call(cmd, shell=True)
 
-def audioMixing(expert_path, novice_path, output_path):
+def normalize_audio(audio, target_dBFS):
+    difference = target_dBFS - audio.dBFS
+    return audio.apply_gain(difference)
+
+def audioMixing(expert_path, novice_path, output_path, target_dBFS=-20.0):
     print(output_path)
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     sound1 = AudioSegment.from_file(expert_path, "wav")
     sound2 = AudioSegment.from_file(novice_path, "wav")
 
-    sound = sound1.overlay(sound2, position=0)
+    # Normalize the volume of both audio files
+    sound1_normalized = normalize_audio(sound1, target_dBFS)
+    sound2_normalized = normalize_audio(sound2, target_dBFS)
+
+    sound1_normalized.export(output_path.replace('audio_mix', 'audio_expert'), format="wav")
+    sound2_normalized.export(output_path.replace('audio_mix', 'audio_novice'), format="wav")
+
+    sound = sound1_normalized.overlay(sound2_normalized, position=0)
 
     sound.export(output_path, format="wav")
 
+    
 def reduceAudioNoise(input_path, output_path):
     print(input_path)
     os.makedirs(os.path.dirname(output_path), exist_ok=True)

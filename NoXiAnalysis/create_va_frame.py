@@ -10,7 +10,7 @@ from NoXiAnalysis.model.vad import read_vadtxt_to_list, evaluate_vad
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="")
-    parser.add_argument("--output_dir", default="output/vad/")
+    parser.add_argument("--output_dir", default="output/vad_by_pyannote/")
     args = parser.parse_args()
 
     # label =[]
@@ -75,16 +75,16 @@ if __name__ == "__main__":
         pyannoteVAD(input_path, output_path)
 
     
-    label =[]
-    label += read_vadtxt_to_list("NoXiAnalysis/vad_annotation/Paris_01/vad_expert.txt")
-    label += read_vadtxt_to_list("NoXiAnalysis/vad_annotation/Paris_01/vad_novice.txt")
-    pred = []
-    pred += read_vadtxt_to_list("output/vad/Paris_01/vad_expert.txt")
-    pred += read_vadtxt_to_list("output/vad/Paris_01/vad_novice.txt")
+    # label =[]
+    # label += read_vadtxt_to_list("NoXiAnalysis/vad_annotation/Paris_01/vad_expert.txt")
+    # label += read_vadtxt_to_list("NoXiAnalysis/vad_annotation/Paris_01/vad_novice.txt")
+    # pred = []
+    # pred += read_vadtxt_to_list("output/vad/Paris_01/vad_expert.txt")
+    # pred += read_vadtxt_to_list("output/vad/Paris_01/vad_novice.txt")
 
-    acc, recall, precision, f1 = evaluate_vad(label, pred)
+    # acc, recall, precision, f1 = evaluate_vad(label, pred)
 
-    print(f"acc: {acc}")
-    print(f"recall: {recall}")
-    print(f"precision: {precision}")
-    print(f"f1: {f1}")
+    # print(f"acc: {acc}")
+    # print(f"recall: {recall}")
+    # print(f"precision: {precision}")
+    # print(f"f1: {f1}")
